@@ -1,0 +1,47 @@
+
+### Teste de buscar todas as salas de aula
+GET http://localhost:40000/GetAllSalasDeAula HTTP/1.1
+content-type: application/json
+
+{
+
+}
+
+### Teste de buscar sala de aula por ID
+POST http://localhost:40000/GetSalasDeAulaByID HTTP/1.1
+content-type: application/json
+
+{    
+    "saladeaulaid": 1
+}
+
+### Teste de inserção de sala de aula
+POST http://localhost:40000/InsertSalasDeAula HTTP/1.1
+
+{    
+    "saladeaulaid": 3,
+    "descricao": "Descrição teste",
+    "localizacao": "Loc teste",
+    "capacidade": 35, 
+    "removido": false,
+}
+
+### Teste de atualização de sala de aula
+POST http://localhost:40000/UpdateSalasDeAula HTTP/1.1
+content-type: application/json
+
+{    
+    "saladeaulaid": 15,
+    "descricao": "Descrição teste edit 2",
+    "localizacao": "Loc teste edit 3",
+    "capacidade": 40,
+    "removido": false
+}
+
+### Teste de deleção de sala de aula
+POST http://localhost:40000/DeleteSalasDeAula HTTP/1.1
+content-type: application/json
+
+{    
+    "saladeaulaid": 15
+}
